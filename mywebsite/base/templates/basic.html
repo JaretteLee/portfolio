@@ -1,0 +1,162 @@
+{%extends "base.html" %}    
+
+{%block content%}
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARETTE LEE</title>
+    <link href="{% static '/css/main.css' %}" rel ="stylesheet"
+    type="text/css">
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+    <style>
+    
+    
+      .social-links {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
+  
+      .social-links li {
+          display: inline-block;
+          margin-right: 10px; /* Adjust as needed */
+      }
+  
+      .social {
+          width: 40px; /* Adjust size as needed */
+          height: auto; /* Maintain aspect ratio */
+      }
+
+      body {
+        /* Set gradient background */
+        background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);/* Adjust colors as needed */
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .content {
+        text-align: center;
+        padding: 50px;
+        color: #fff;
+    }
+  </style>
+</head>
+<body>
+    <br>
+    <div class="container">
+       <div class="row">
+           <div class = "col-md-3">
+              <div class="card card-body h-100 border-info" id="profile-wrapper">  
+                  <img id="profile-pic" src="{% static 'images/my.jpg' %}" > 
+                  <hr>
+                  <h4> Hi I'm Jarette Lee</h4>
+                  <p>Aspiring Web Developer</p>
+                  <nav>
+                    <a href="{% url 'home' %}" style="color: black;">Home |</a>
+                    <a href="{% url 'about' %}" style="color: black;">  About |</a>
+                    <a href="{% url 'contacts' %}" style="color: black;">Contacts</a>
+                </nav>
+                
+              </div>
+        </div>
+        
+        <div class = "col-md-9">
+            <div class="card card-body h-100 border-info">
+               <h4>My first project as a developer</h4>
+               <hr>
+               <p>Hello and welcome to my portfolio! 
+               As a budding enthusiast in the vast world of 
+               web development, 
+               I'm excited to present my very first project.
+               Embarking on this journey as a beginner has been both 
+               thrilling and enlightening, 
+               as every step has been a learning experience. Through this project, I've not only
+               honed my skills but also discovered how fun web development is .
+               </p>
+
+               <ul class="social-links">
+                  <a href="https://www.facebook.com/castoff.thrift">
+                     <img class="social" src="{% static 'images/facebook.png' %}" alt="Facebook">
+                 </a>
+                 <a href="https://www.messenger.com">
+                     <img class="social" src="{% static 'images/messenger.png' %}" alt="Messenger">
+                 </a>
+                 <a href="mailto:your.email@example.com">
+                     <img class="social" src="{% static 'images/gmail.png' %}" alt="Gmail">
+                 </a>
+                 
+               </ul>
+
+               
+              
+            </div>     
+         </div>
+      </div>  
+      <br>
+        <div class="row">
+            <div class = "col-md-6">
+               <div class="card card-body h-100">
+                <img src="{% static 'images/emin.jpg' %}" > 
+               </div>
+            </div>
+ 
+            <div class = "col-md-6">
+               <div class="card card-body h-100">
+                  <h1>Background</h1>
+                  <p>I'm a aspiring web developer, a student from Palawan State University studying
+                      Bachelor of Science in Information Technology.
+                  </p>
+                  <p>
+                    Welcome to my programming portfolio, a digital showcase of my passion, skills, 
+                    and journey in the world of software development. Within these virtual pages, you'll find a collection of projects, experiences, and insights that reflect my dedication to the craft of coding and my
+                     continuous pursuit of excellence in the ever-evolving landscape of technology.
+                     
+                  </p>
+                  <nav>
+                    <img src="{% static 'images/kurt.jpg' %}"width="200" height="200" style="margin-top: 45px;" >
+                    <img src="{% static 'images/kurt.jpg' %}"width="200" height="200" style="margin-top: 45px;" >
+                </nav>
+                  
+               </div>
+            </div>
+         </div>  
+    <br>
+         <div class="row">
+            <div class = "col-md-6">
+               <div class="card card-body h-110">
+                  <H5>How I learn</H5>
+                  <hr>
+                  <p>Hours of practice and reverse engineer templates from YouTubes and from past school activities</p>
+
+                  <p>I might be behind when it comes to this field compared to my classmates, but I'll try my best to be better and meet the standard.</p>
+
+               </div>  
+            </div>
+ 
+            <div class = "col-md-6">
+               <div class="card card-body h-100">
+                  <h5>My Goals</h5>
+                  <p>To become a proficient web developer capable of creating dynamic and
+                      visually appealing websites and web applications, equipped with a comprehensive
+                       understanding of modern web development technologies and best practices, 
+                       and to continually enhance skills through hands-on projects, 
+                     learning resources, and collaboration with peers in the field.</p>
+               </div>
+            </div>
+         </div>  
+ 
+    <br> 
+    </div>
+    </div>
+    
+</body>
+</html>
+{%endblock content%}

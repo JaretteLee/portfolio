@@ -1,0 +1,73 @@
+{%extends "base.html" %}
+
+{%block content%}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARETTE LEE</title>
+    <link href="{% static '/css/main.css' %}" rel ="stylesheet"
+    type="text/css">
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+    <style>
+      .social-links {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
+  
+      .social-links li {
+          display: inline-block;
+          margin-right: 10px; /* Adjust as needed */
+      }
+  
+      .social {
+          width: 40px; /* Adjust size as needed */
+          height: auto; /* Maintain aspect ratio */
+      }
+
+      body {
+        /* Set gradient background */
+        background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);/* Adjust colors as needed */
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .content {
+        text-align: center;
+        padding: 50px;
+        color: #fff;
+    }
+  </style>
+</head>
+<body>
+    <br>
+    <div class="container">
+       <div class="row">
+           <div class = "col-md-3">
+              <div class="card card-body h-100 border-info" id="profile-wrapper">     
+                  <img src="{% static 'images/guitar.jpg' %}"width="200" height="400" style="margin-top: 45px;" >           
+              </div>
+        </div>
+          
+        <div class = "col-md-9">
+            <div class="card card-body h-100 border-info">
+               <h1>About me</h1>
+               <hr>
+               <section>
+                <h2>Hello, I'm Jarette Lee</h2>
+                <p>I am a BSIT student with a passion for web development. I don't have enough of experience in web development.</p>
+                <p>because I'm just starting out. My expertise lies in web designing and also suitable for backend works.</p>
+                <p>I am dedicated to delivering high-quality work and exceeding client expectations. </p>
+                <p>In my free time, I enjoy working out, playing basketball, and play with my dog.</p>
+                <p>Feel free to explore my portfolio. 
+                If you have any questions or would like to collaborate, don't hesitate to <a href="{% url 'contacts' %}">contact me</a>.</p>
+            </section>
+            </div>
+{%endblock content%}
